@@ -7,4 +7,6 @@ class User(models.Model):
 
 
   def __str__(self):
-    return self.name
+    output = "User Name is " + self.name + " and age is " + str(self.age) + "."
+    return output
+  

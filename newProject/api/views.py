@@ -30,7 +30,7 @@ def user_detail(request, pk):
     return Response(serializer.data)
   
   elif request.method == 'PUT':
-    serializer = User(user, data=request.data)
+    serializer = UserSerializer(user, data=request.data)
     if serializer.is_valid():
       serializer.save()
       return Response(serializer.data)
